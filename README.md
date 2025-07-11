@@ -19,6 +19,8 @@
     <a href="https://anaconda.org/conda-forge/sahi"><img src="https://anaconda.org/conda-forge/sahi/badges/version.svg" alt="conda version"></a>
     <a href="https://github.com/obss/sahi/actions/workflows/ci.yml"><img src="https://github.com/obss/sahi/actions/workflows/ci.yml/badge.svg" alt="Continious Integration"></a>
   <br>
+    <a href="https://context7.com/obss/sahi"><img src="https://img.shields.io/badge/Context7%20MCP-Indexed-blue" alt="Context7 MCP"></a>
+    <a href="https://context7.com/obss/sahi/llms.txt"><img src="https://img.shields.io/badge/llms.txt-✓-brightgreen" alt="llms.txt"></a>
     <a href="https://ieeexplore.ieee.org/document/9897990"><img src="https://img.shields.io/badge/DOI-10.1109%2FICIP46576.2022.9897990-orange.svg" alt="ci"></a>
     <a href="https://colab.research.google.com/github/obss/sahi/blob/main/demo/inference_for_ultralytics.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
     <a href="https://huggingface.co/spaces/fcakyon/sahi-yolox"><img src="https://raw.githubusercontent.com/obss/sahi/main/resources/hf_spaces_badge.svg" alt="HuggingFace Spaces"></a>
@@ -45,6 +47,9 @@ SAHI helps developers overcome real-world challenges in object detection by enab
 
 [🏆 List of competition winners that used SAHI](https://github.com/obss/sahi/discussions/688)
 
+### Approved by AI Tools
+SAHI's documentation is [indexed in Context7 MCP](https://context7.com/obss/sahi), providing AI coding assistants with up-to-date, version-specific code examples and API references. We also provide an [llms.txt](https://context7.com/obss/sahi/llms.txt) file following the emerging standard for AI-readable documentation. To integrate SAHI docs with your AI development workflow, check out the [Context7 MCP installation guide](https://github.com/upstash/context7#%EF%B8%8F-installation).
+
 ## <div align="center">Installation</div>
 
 ### Basic Installation
@@ -60,7 +65,7 @@ pip install sahi
 - Install your desired version of pytorch and torchvision:
 
 ```console
-pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126
+pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu126
 ```
 
 (torch 2.1.2 is required for mmdet support):
@@ -69,16 +74,22 @@ pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorc
 pip install torch==2.1.2 torchvision==0.16.2 --index-url https://download.pytorch.org/whl/cu121
 ```
 
+- Install your desired detection framework (ultralytics):
+
+```console
+pip install ultralytics>=8.3.161
+```
+
+- Install your desired detection framework (huggingface):
+
+```console
+pip install transformers>=4.49.0 timm
+```
+
 - Install your desired detection framework (yolov5):
 
 ```console
 pip install yolov5==7.0.14 sahi==0.11.21
-```
-
-- Install your desired detection framework (ultralytics):
-
-```console
-pip install ultralytics>=8.3.86
 ```
 
 - Install your desired detection framework (mmdet):
@@ -86,12 +97,6 @@ pip install ultralytics>=8.3.86
 ```console
 pip install mim
 mim install mmdet==3.3.0
-```
-
-- Install your desired detection framework (huggingface):
-
-```console
-pip install transformers>=4.42.0 timm
 ```
 
 - Install your desired detection framework (roboflow):
